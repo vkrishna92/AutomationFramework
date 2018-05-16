@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BC204E2-19EB-446B-A766-07B3416C55D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutomationFramework</RootNamespace>
+    <AssemblyName>AutomationFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="POM\PageObjects\DemoQaHome.cs" />
+    <Compile Include="POM\TestCases\DempHomeTitle.cs" />
+    <Compile Include="Utilities\DriverClass.cs" />
+    <Compile Include="Utilities\ExplicitWaits.cs" />
+    <Compile Include="Utilities\ExtentReportClass.cs" />
+    <Compile Include="Utilities\OneTimeClass.cs" />
+    <Compile Include="POM\TestCases\TestSetup\SampleTest.cs" />
+    <Compile Include="POM\TestCases\TestSetup\TestBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\BrowserFactory.cs" />
+    <Compile Include="Utilities\ProjectPath.cs" />
+    <Compile Include="Utilities\TestInit.cs" />
+    <Compile Include="TestData\TestDataClass\TestDataManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="POM\PageObjects\ObjectTypes\" />
+    <Folder Include="TestData\TestData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="extent-config.xml" />
+    <Content Include="Reports\LogReports.txt" />
+    <Content Include="Reports\MyOwnReport.html" />
+    <Content Include="Reports\Reports.html" />
+    <Content Include="Reports\TestSummary.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ExtentReports">
+      <Version>2.40.2</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.10.1</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit.ConsoleRunner">
+      <Version>3.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.9.0</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Firefox.WebDriver">
+      <Version>0.19.1</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.Support">
+      <Version>3.9.1</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver">
+      <Version>3.9.1</Version>
+    </PackageReference>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver">
+      <Version>2.36.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

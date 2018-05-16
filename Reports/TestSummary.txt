@@ -1,0 +1,10 @@
+Title : Utelogy Automation Test
+Execution Start Time :2/9/2018 3:06:52 PM	End Time :2/9/2018 3:07:02 PM	Total Execution Time : 00:00:10.2181301
+Total Pass : 0
+Total Fail : 1
+Total Skipped : 0
+Total Count : 1
+=========================================================================================================
+FAILED TEST CASES
+ValidateAlignment
+PASSED TEST CASES

@@ -1,0 +1,28 @@
+Test Execution Started on : 2/12/2018 2:11:20 PM
+INFO : Dashboard Page Loaded
+********** ERROR **********
+ERROR : 
+Could not find element by: By.XPath: .//*[@id='DashboardStats']/div/div[1]/div/div/span[1]
+INFO : Login Successful
+********** ERROR **********
+ERROR : 
+Failed to save User : Could not save : Duplicated value cannot be used.
+********** ERROR **********
+ERROR : 
+Failed to save User : Could not save : Duplicated value cannot be used.
+INFO : Resource Tab Clicked
+INFO : Drivers Link Clicked
+********** ERROR **********
+ERROR : 
+Could not find element by: By.Id: contenttableDriverGrid
+INFO : Browser Created
+INFO : Could not save : A value must be entered.
+INFO : Not a valid e-mail address.
+INFO : In DashboardTPA Page
+INFO : Scrollbar down height size :0
+********** ERROR **********
+ERROR : 
+Could not find element by: By.XPath: .//*[@id='TextSearch']
+********** ERROR **********
+ERROR : 
+Could not find element by: By.Id: contenttableResourceGrid, or: By.XPath: .//*[@id='main-content']/div[1]/span
