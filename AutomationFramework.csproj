@@ -65,8 +65,6 @@
   <ItemGroup>
     <Content Include="extent-config.xml" />
     <Content Include="Reports\LogReports.txt" />
-    <Content Include="Reports\MyOwnReport.html" />
-    <Content Include="Reports\Reports.html" />
     <Content Include="Reports\TestSummary.txt" />
   </ItemGroup>
   <ItemGroup>
