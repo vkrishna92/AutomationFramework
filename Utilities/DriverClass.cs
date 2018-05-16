@@ -9,6 +9,6 @@ namespace AutomationFramework.SupportLibrary
 {
     public class DriverClass
     {
-        public static IWebDriver dr;        
+        public static IWebDriver dr;        //Static driver
     }
 }
