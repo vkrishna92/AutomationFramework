@@ -12,14 +12,15 @@ namespace AutomationFramework.POM.TestCases
         [OneTimeSetUp]
         public void LogOpen()
         {
-            //extent = new ExtentReports(@"C:\Users\Vamsi\Desktop\Reports.html", true, DisplayOrder.NewestFirst);
-            extent = new ExtentReports(ProjectPath.getProjectPath() + @"\Reports\Reports.html", true, DisplayOrder.NewestFirst);
-            //Property prop = new Properties();            
+            //Create a instance of Extenport            
+            ExtentReportClass.CreateExtentReportInstacne();
+            
         }              
        [OneTimeTearDown]
         public void logClose()
         {
-            extent.Flush();
+            //End Extent test
+            ExtentReportClass.EndExtentTest();
             dr.Quit();
             email_send();
         }
@@ -27,7 +28,7 @@ namespace AutomationFramework.POM.TestCases
         {
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-            mail.From = new MailAddress("vamsi.gattupalli@utelogy.com");
+            mail.From = new MailAddress("");
             //mail.To.Add("vamsi.gattupalli@utelogy.com");
             //mail.To.Add("ananya.bose@utelogy.com");
             mail.Subject = "Automation Report";            

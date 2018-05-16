@@ -10,25 +10,25 @@ namespace AutomationFramework.SupportLibrary
 {
     class ExplicitWaits:DriverClass
     {
-        WebDriverWait wait = new WebDriverWait(dr, TimeSpan.FromSeconds(10));
-        public void AlertIsPresent()
+        private static WebDriverWait wait = new WebDriverWait(dr, TimeSpan.FromSeconds(10));
+        public static void AlertIsPresent()
         {
             wait.Until(ExpectedConditions.AlertIsPresent());            
         }
-        public void ElementExists(By elementBy_Object)
+        public static void ElementExists(By elementBy_Object)
         {
             wait.Until(ExpectedConditions.ElementExists(elementBy_Object));
             
         }
-        public void ElementIsVisible(By elementBy_Object)
+        public static void ElementIsVisible(By elementBy_Object)
         {
             wait.Until(ExpectedConditions.ElementIsVisible(elementBy_Object));
         }
-        public void ElementToBeClickable(By elementBy_Object)
+        public static void ElementToBeClickable(By elementBy_Object)
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(elementBy_Object));
         }
-        public void ElementToBeClickable(IWebElement element)
+        public static void ElementToBeClickable(IWebElement element)
         {
             wait.Until(ExpectedConditions.ElementToBeClickable(element));            
         }        

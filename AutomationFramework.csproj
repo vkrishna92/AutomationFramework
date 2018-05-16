@@ -45,13 +45,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="POM\PageObjects\DemoQaHome.cs" />
+    <Compile Include="POM\TestCases\DemoHomeValidateDraggableMenu.cs" />
     <Compile Include="POM\TestCases\DempHomeTitle.cs" />
     <Compile Include="Utilities\DriverClass.cs" />
     <Compile Include="Utilities\ExplicitWaits.cs" />
     <Compile Include="Utilities\ExtentReportClass.cs" />
     <Compile Include="Utilities\OneTimeClass.cs" />
-    <Compile Include="POM\TestCases\TestSetup\SampleTest.cs" />
-    <Compile Include="POM\TestCases\TestSetup\TestBase.cs" />
+    <Compile Include="Utilities\TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\BrowserFactory.cs" />
     <Compile Include="Utilities\ProjectPath.cs" />

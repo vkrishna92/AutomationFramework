@@ -12,7 +12,7 @@ namespace AutomationFramework.SupportLibrary
 {
     class TestInit
     {
-        public static void uManageLogin(IWebDriver dr)
+        public static void ManageLogin(IWebDriver dr)
         {           
             dr.Url = "http://demoqa.com/";                                
         }
