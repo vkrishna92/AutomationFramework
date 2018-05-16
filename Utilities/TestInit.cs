@@ -13,12 +13,8 @@ namespace AutomationFramework.SupportLibrary
     class TestInit
     {
         public static void uManageLogin(IWebDriver dr)
-        {
-           
-            dr.Url = "http://demoqa.com/";
-          
-          
-            Thread.Sleep(2000);
+        {           
+            dr.Url = "http://demoqa.com/";                                
         }
         
     }

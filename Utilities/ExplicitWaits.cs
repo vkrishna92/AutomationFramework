@@ -13,8 +13,25 @@ namespace AutomationFramework.SupportLibrary
         WebDriverWait wait = new WebDriverWait(dr, TimeSpan.FromSeconds(10));
         public void AlertIsPresent()
         {
-            wait.Until(ExpectedConditions.AlertIsPresent());
+            wait.Until(ExpectedConditions.AlertIsPresent());            
         }
-       
+        public void ElementExists(By elementBy_Object)
+        {
+            wait.Until(ExpectedConditions.ElementExists(elementBy_Object));
+            
+        }
+        public void ElementIsVisible(By elementBy_Object)
+        {
+            wait.Until(ExpectedConditions.ElementIsVisible(elementBy_Object));
+        }
+        public void ElementToBeClickable(By elementBy_Object)
+        {
+            wait.Until(ExpectedConditions.ElementToBeClickable(elementBy_Object));
+        }
+        public void ElementToBeClickable(IWebElement element)
+        {
+            wait.Until(ExpectedConditions.ElementToBeClickable(element));            
+        }        
+
     }
 }
