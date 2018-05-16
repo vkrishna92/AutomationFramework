@@ -12,8 +12,6 @@ namespace AutomationFramework.POM.TestCases
         [OneTimeSetUp]
         public void LogOpen()
         {
-
-            //Changes 
             //extent = new ExtentReports(@"C:\Users\Vamsi\Desktop\Reports.html", true, DisplayOrder.NewestFirst);
             extent = new ExtentReports(ProjectPath.getProjectPath() + @"\Reports\Reports.html", true, DisplayOrder.NewestFirst);
             //Property prop = new Properties();            
