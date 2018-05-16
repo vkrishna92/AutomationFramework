@@ -20,5 +20,15 @@ namespace AutomationFramework.POM.PageObjects
             driver = dr;
             PageFactory.InitElements(driver, this);
         }
+
+        //interactions menu
+        public Dictionary<string, IWebElement> MenuInteractionsItems()
+        {
+            var itemList = driver.FindElement(By.Id("menu-interactions")).FindElements(By.TagName("a"));
+            Dictionary<string,IWebElement> list = new Dictionary<string, IWebElement>();
+            foreach (var i in itemList)
+                list.Add(i.Text, i);
+            return list;
+        }
     }
 }

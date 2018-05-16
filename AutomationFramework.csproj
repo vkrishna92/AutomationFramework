@@ -45,8 +45,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="POM\PageObjects\DemoQaHome.cs" />
-    <Compile Include="POM\TestCases\DemoHomeValidateDraggableMenu.cs" />
     <Compile Include="POM\TestCases\DempHomeTitle.cs" />
+    <Compile Include="POM\TestCases\HomeInteractionsMenu.cs" />
     <Compile Include="Utilities\DriverClass.cs" />
     <Compile Include="Utilities\ExplicitWaits.cs" />
     <Compile Include="Utilities\ExtentReportClass.cs" />
@@ -59,7 +59,6 @@
     <Compile Include="TestData\TestDataClass\TestDataManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="POM\PageObjects\ObjectTypes\" />
     <Folder Include="TestData\TestData\" />
   </ItemGroup>
   <ItemGroup>

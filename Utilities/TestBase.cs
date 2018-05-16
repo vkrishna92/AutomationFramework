@@ -19,7 +19,9 @@ namespace AutomationFramework.POM.TestCases.TestSetup
         [SetUp]
         public void setup()
         {
-            //start Extent Test
+            //take current test case 
+           
+            //start Extent Test            
             ExtentReportClass.StartExtentTest();            
             //Open Browser
             dr = BrowserFactory.getBrowser(dr);
@@ -31,7 +33,8 @@ namespace AutomationFramework.POM.TestCases.TestSetup
         [TearDown]
         public void closure()
         {
-            
+            //StackTrace details for failed Testcases
+            ExtentReportClass.EndExtentTest();           
             dr.Close();            
         }
 

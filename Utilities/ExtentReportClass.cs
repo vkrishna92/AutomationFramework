@@ -17,12 +17,17 @@ namespace AutomationFramework.SupportLibrary
 
         public static ExtentTest test;
 
-        //Create Extent report Instacne
+        /// <summary>
+        ///Create Extent report Instacne 
+        /// </summary>        
         public static void CreateExtentReportInstacne()
         {
             extent = new ExtentReports(ProjectPath.getProjectPath() + @"\Reports\Reports.html", true, DisplayOrder.NewestFirst);
         }
-        //starting Extent Test
+        
+        /// <summary>
+        /// starting Extent Test
+        /// </summary>
         public static void StartExtentTest()
         {
             string currentTestClass = TestContext.CurrentContext.Test.ClassName;
@@ -30,8 +35,7 @@ namespace AutomationFramework.SupportLibrary
         }
         //Closing test
         public static void EndExtentTest()
-        {            
-            //StackTrace details for failed Testcases
+        {
             var status = TestContext.CurrentContext.Result.Outcome.Status;
             var stackTrace = "" + TestContext.CurrentContext.Result.StackTrace + "";
             var errorMessage = TestContext.CurrentContext.Result.Message;
