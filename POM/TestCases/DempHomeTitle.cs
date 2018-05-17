@@ -1,5 +1,6 @@
 ﻿using AutomationFramework.POM.PageObjects;
 using AutomationFramework.POM.TestCases.TestSetup;
+using AutomationFramework.Utilities;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace AutomationFramework.POM.TestCases
         public void TitleValidation()
         {
             DemoQaHome dm = new DemoQaHome(dr);
+            SeleniumScreenshot.TakeScreenShot("DemoHome.jpg");
             Console.WriteLine(dm.pageHeading.Text);
 
         }

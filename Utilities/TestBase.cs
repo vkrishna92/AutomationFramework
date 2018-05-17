@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutomationFramework.SupportLibrary;
+using AutomationFramework.Utilities;
 
 namespace AutomationFramework.POM.TestCases.TestSetup
 {
@@ -19,12 +20,15 @@ namespace AutomationFramework.POM.TestCases.TestSetup
         [SetUp]
         public void setup()
         {
-            //take current test case 
-           
-            //start Extent Test            
-            ExtentReportClass.StartExtentTest();            
+            
+            
             //Open Browser
             dr = BrowserFactory.getBrowser(dr);
+            //start Extent Test            
+            ExtentReportClass.StartExtentTest();
+            //Create folder for screenshots
+            SeleniumScreenshot.CreateDirectoryForScreenshots("DemoQAWebSite");
+
             //Login to stating portal
             TestInit.ManageLogin(dr);
             //Explicit wait            
