@@ -2,6 +2,7 @@
 using AutomationFramework.POM.TestCases.TestSetup;
 using AutomationFramework.Utilities;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace AutomationFramework.POM.TestCases
         public void TitleValidation()
         {
             DemoQaHome dm = new DemoQaHome(dr);
-            SeleniumScreenshot.TakeScreenShot("DemoHome.jpg");
+            SeleniumScreenshot.TakeScreenShot("DemoHome",dr.FindElement(By.LinkText("Tooltip")));
             Console.WriteLine(dm.pageHeading.Text);
 
         }
