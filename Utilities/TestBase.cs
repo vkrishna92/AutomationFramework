@@ -32,6 +32,7 @@ namespace AutomationFramework.POM.TestCases.TestSetup
             //Explicit wait            
             ExplicitWaits.ElementExists(By.ClassName("entry-title"));
         }
+        
         [TearDown]
         public void closure()
         {
