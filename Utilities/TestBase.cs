@@ -20,15 +20,13 @@ namespace AutomationFramework.POM.TestCases.TestSetup
         [SetUp]
         public void setup()
         {
-            
-            
+            var directoryName = TestContext.CurrentContext.Test.Name.ToString();            
             //Open Browser
             dr = BrowserFactory.getBrowser(dr);
             //start Extent Test            
             ExtentReportClass.StartExtentTest();
             //Create folder for screenshots
-            SeleniumScreenshot.CreateDirectoryForScreenshots("DemoQAWebSite");
-
+            SeleniumScreenshot.CreateDirectoryForScreenshots(directoryName);
             //Login to stating portal
             TestInit.ManageLogin(dr);
             //Explicit wait            
