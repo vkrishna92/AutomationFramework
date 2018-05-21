@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AutomationFramework.Utilities;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AutomationFramework.POM.PageObjects.Draggable
 {
-    class DraggableContraintMovement
+    class DraggableContraintMovement:SeleniumActions
     {
         IWebDriver driver;
         [FindsBy(How = How.Id, Using = "draggabl")]
@@ -27,17 +28,7 @@ namespace AutomationFramework.POM.PageObjects.Draggable
             PageFactory.InitElements(dr, this);
         }
 
-        /// <summary>
-        /// This method will move the given web element to the given offset
-        /// </summary>
-        /// <param name="element"></param>
-        /// <param name="xoffset"></param>
-        /// <param name="yoffset"></param>
-        public void MoveElementBy(IWebElement element,int xoffset,int yoffset)
-        {
-            Actions act = new Actions(driver);
-            act.DragAndDropToOffset(element, xoffset, yoffset).Build().Perform();
-        }
+        
 
     }
 }
