@@ -67,16 +67,14 @@ namespace AutomationFramework.Utilities
             int height = Convert.ToInt32((js.ExecuteScript("return document.documentElement.scrollHeight")));
             //document.body.scrollHeight
             int xLoc = 0;int yLoc = 0;
-            while(yLoc<=webElement.Location.Y)
+            while(yLoc<=height)
             {
                 scrollToLocation(0, yLoc);
                 TakeScreenShot(fileName+"_"+yLoc+".png");
-                yLoc = yLoc + 100;  
-                if(yLoc >=height)
-                {
-                    break;
-                }
+                yLoc = yLoc + 100;                  
             }
         }
+
+        
     }
 }

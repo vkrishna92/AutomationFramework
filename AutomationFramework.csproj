@@ -45,12 +45,17 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="POM\PageObjects\DemoQaHome.cs" />
+    <Compile Include="POM\PageObjects\Draggable\DefaultDraggable.cs" />
+    <Compile Include="POM\PageObjects\Draggable\DraggableContraintMovement.cs" />
+    <Compile Include="POM\TestCases\ConstrainMovementDrag.cs" />
+    <Compile Include="POM\TestCases\DefaultDraggableValidation.cs" />
     <Compile Include="POM\TestCases\DempHomeTitle.cs" />
     <Compile Include="POM\TestCases\HomeInteractionsMenu.cs" />
     <Compile Include="Utilities\DriverClass.cs" />
     <Compile Include="Utilities\ExplicitWaits.cs" />
     <Compile Include="Utilities\ExtentReportClass.cs" />
     <Compile Include="Utilities\OneTimeClass.cs" />
+    <Compile Include="Utilities\SeleniumActions.cs" />
     <Compile Include="Utilities\SeleniumScreenshot.cs" />
     <Compile Include="Utilities\TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
