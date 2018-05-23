@@ -19,6 +19,7 @@ namespace AutomationFramework.POM.TestCases
        public void ValidateContrainMovementDrag()
         {
             DemoQaHome hm = new DemoQaHome(dr);
+            Console.WriteLine(hm.menuItem.mainMenu.MenuItem_Home.GetAttribute("title"));
             //Click on Draggable side Menu
             hm.ClickOnMenuItem("Draggable");
             ExplicitWaits.ElementIsVisible(By.TagName("h1"));//Wait for the heading to display

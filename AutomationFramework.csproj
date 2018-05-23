@@ -47,6 +47,10 @@
     <Compile Include="POM\PageObjects\DemoQaHome.cs" />
     <Compile Include="POM\PageObjects\Draggable\DefaultDraggable.cs" />
     <Compile Include="POM\PageObjects\Draggable\DraggableContraintMovement.cs" />
+    <Compile Include="POM\PageObjects\MenuClasses\InteractionsMenu.cs" />
+    <Compile Include="POM\PageObjects\MenuClasses\MainMenu.cs" />
+    <Compile Include="POM\PageObjects\MenuClasses\MenuItems.cs" />
+    <Compile Include="POM\PageObjects\MenuClasses\WidgetMenu.cs" />
     <Compile Include="POM\TestCases\ConstrainMovementDrag.cs" />
     <Compile Include="POM\TestCases\DefaultDraggableValidation.cs" />
     <Compile Include="POM\TestCases\DempHomeTitle.cs" />

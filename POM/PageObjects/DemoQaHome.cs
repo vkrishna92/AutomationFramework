@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using AutomationFramework.POM.PageObjects.MenuClasses;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -11,13 +12,15 @@ namespace AutomationFramework.POM.PageObjects
     class DemoQaHome
     {
         IWebDriver driver;
-
-        [FindsBy(How = How.ClassName, Using = "entry-title")]
+        public MenuItems menuItem;
+       [FindsBy(How = How.ClassName, Using = "entry-title")]
         public IWebElement pageHeading;
-
+       
         public DemoQaHome(IWebDriver dr)
         {
             driver = dr;
+            menuItem = new MenuItems();
+
             PageFactory.InitElements(driver, this);
         }
         
