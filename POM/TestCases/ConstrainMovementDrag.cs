@@ -31,7 +31,7 @@ namespace AutomationFramework.POM.TestCases
             //Take screenshot
             SeleniumScreenshot.TakeScreenShot("DraggableDefautl.png");
             //Click on constrain movement
-            dd.ClickOnLink("Constrain movement");
+            dd.menuItem.draggableSubMenu.ConstrainMovement.Click();
             //Take screenshot
             SeleniumScreenshot.TakeScreenShot("ConstrainMovementDefault.png");
             //Perform actions

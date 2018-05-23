@@ -1,4 +1,5 @@
-﻿using AutomationFramework.Utilities;
+﻿using AutomationFramework.POM.PageObjects.MenuClasses;
+using AutomationFramework.Utilities;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
@@ -21,11 +22,14 @@ namespace AutomationFramework.POM.PageObjects.Draggable
 
         [FindsBy(How = How.Id, Using = "draggabl3")]
         public IWebElement constrainDrag;
+
+        public MenuItems menuItem;
         
         public DraggableContraintMovement(IWebDriver dr)
         {
             driver = dr;
             PageFactory.InitElements(dr, this);
+            menuItem = new MenuItems();
         }
 
         [FindsBy(How = How.ClassName, Using = "entry-title")]

@@ -1,4 +1,5 @@
-﻿using AutomationFramework.Utilities;
+﻿using AutomationFramework.POM.PageObjects.MenuClasses;
+using AutomationFramework.Utilities;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
@@ -13,7 +14,7 @@ namespace AutomationFramework.POM.PageObjects.Draggable
     class DefaultDraggable: SeleniumActions
     {
         IWebDriver driver;
-
+        public MenuItems menuItem;
         [FindsBy(How = How.Id, Using = "draggable")]
         public IWebElement draggableBox;
 
@@ -24,6 +25,7 @@ namespace AutomationFramework.POM.PageObjects.Draggable
         {
             driver = dr;
             PageFactory.InitElements(driver, this);
+            menuItem = new MenuItems();
         }
 
         public void moveElementBy(int xoffset,int yoffset,IWebElement element)

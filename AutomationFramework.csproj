@@ -47,6 +47,7 @@
     <Compile Include="POM\PageObjects\DemoQaHome.cs" />
     <Compile Include="POM\PageObjects\Draggable\DefaultDraggable.cs" />
     <Compile Include="POM\PageObjects\Draggable\DraggableContraintMovement.cs" />
+    <Compile Include="POM\PageObjects\MenuClasses\DraggableSubMenu.cs" />
     <Compile Include="POM\PageObjects\MenuClasses\InteractionsMenu.cs" />
     <Compile Include="POM\PageObjects\MenuClasses\MainMenu.cs" />
     <Compile Include="POM\PageObjects\MenuClasses\MenuItems.cs" />
