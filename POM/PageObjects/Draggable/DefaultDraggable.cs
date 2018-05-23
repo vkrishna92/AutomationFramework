@@ -15,6 +15,7 @@ namespace AutomationFramework.POM.PageObjects.Draggable
     {
         IWebDriver driver;
         public MenuItems menuItem;
+        public DraggableSubMenu subMenu;
         [FindsBy(How = How.Id, Using = "draggable")]
         public IWebElement draggableBox;
 
@@ -26,6 +27,7 @@ namespace AutomationFramework.POM.PageObjects.Draggable
             driver = dr;
             PageFactory.InitElements(driver, this);
             menuItem = new MenuItems();
+            subMenu = new DraggableSubMenu();
         }
 
         public void moveElementBy(int xoffset,int yoffset,IWebElement element)

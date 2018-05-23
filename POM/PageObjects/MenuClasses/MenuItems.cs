@@ -11,14 +11,14 @@ namespace AutomationFramework.POM.PageObjects.MenuClasses
         public InteractionsMenu interactionMenu;
         public MainMenu mainMenu;
         public WidgetMenu widgetMenu;
-        public DraggableSubMenu draggableSubMenu;
+        //public DraggableSubMenu draggableSubMenu;
 
         public MenuItems()
         {
             interactionMenu = new InteractionsMenu();
             mainMenu = new MainMenu();
             widgetMenu = new WidgetMenu();
-            draggableSubMenu = new DraggableSubMenu();
+            //draggableSubMenu = new DraggableSubMenu();
         }
     }
 }
