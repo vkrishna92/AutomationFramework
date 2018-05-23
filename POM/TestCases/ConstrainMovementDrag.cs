@@ -19,23 +19,28 @@ namespace AutomationFramework.POM.TestCases
        public void ValidateContrainMovementDrag()
         {
             DemoQaHome hm = new DemoQaHome(dr);
-            Console.WriteLine(hm.menuItem.mainMenu.MenuItem_Home.GetAttribute("title"));
+            //Validate home page title
+            Assert.AreEqual("Home", hm.pageHeading.Text);
+            //Take screenshot 
+            SeleniumScreenshot.TakeScreenShot("Homescreen.png");
             //Click on Draggable side Menu
-            hm.ClickOnMenuItem("Draggable");
-            ExplicitWaits.ElementIsVisible(By.TagName("h1"));//Wait for the heading to display
-            Assert.AreEqual("Draggable", dr.FindElement(By.TagName("h1")).Text);//Asserting headings
-            //Creating object for the page
-            DefaultDraggable drg = new DefaultDraggable(dr);
-            SeleniumScreenshot.TakeScreenShot("DraggableHome.png");//Take initial screenshot of Draggable home page
-            //Click on Constrain Movement side menu
-            drg.ClickOnLink("Constrain movement");
-            DraggableContraintMovement cons = new DraggableContraintMovement(dr);
-            SeleniumScreenshot.TakeScreenShot("ContrainMovement.png");
+            hm.menuItem.interactionMenu.Draggable.Click();
+            //Validate Draggable default page title
+            DefaultDraggable  dd = new DefaultDraggable(dr);
+            Assert.AreEqual("Draggable", dd.pageHeading.Text);
+            //Take screenshot
+            SeleniumScreenshot.TakeScreenShot("DraggableDefautl.png");
+            //Click on constrain movement
+            dd.ClickOnLink("Constrain movement");
+            //Take screenshot
+            SeleniumScreenshot.TakeScreenShot("ConstrainMovementDefault.png");
+            //Perform actions
+            DraggableContraintMovement cons = new DraggableContraintMovement(dr);            
             cons.MoveElementBy(cons.horizontalDrag, 100, 0);
             cons.MoveElementBy(cons.verticalDrag, 0, 50);
             cons.MoveElementBy(cons.constrainDrag, 100, 100);
             SeleniumScreenshot.TakeScreenShot("AfterContrainMovement", cons.constrainDrag);
-
+            
         }
     }
 }

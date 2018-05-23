@@ -13,6 +13,7 @@ namespace AutomationFramework.POM.PageObjects.Draggable
     class DefaultDraggable: SeleniumActions
     {
         IWebDriver driver;
+
         [FindsBy(How = How.Id, Using = "draggable")]
         public IWebElement draggableBox;
 
@@ -30,6 +31,8 @@ namespace AutomationFramework.POM.PageObjects.Draggable
             Actions act = new Actions(driver);
             act.DragAndDropToOffset(element, xoffset, yoffset).Build().Perform();
         }
-                
+        [FindsBy(How = How.ClassName, Using = "entry-title")]
+        public IWebElement pageHeading;
+
     }
 }

@@ -28,6 +28,8 @@ namespace AutomationFramework.POM.PageObjects.Draggable
             PageFactory.InitElements(dr, this);
         }
 
+        [FindsBy(How = How.ClassName, Using = "entry-title")]
+        public IWebElement pageHeading;
         
 
     }
