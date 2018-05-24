@@ -15,8 +15,8 @@ namespace AutomationFramework.POM.TestCases.TestSetup
 {
     
     class TestBase:DriverClass
-    {        
-       
+    {
+        public ExtentTest test;
         [SetUp]
         public void setup()
         {
@@ -25,6 +25,7 @@ namespace AutomationFramework.POM.TestCases.TestSetup
             dr = BrowserFactory.getBrowser(dr);
             //start Extent Test            
             ExtentReportClass.StartExtentTest();
+            test = ExtentReportClass.test;
             //Create folder for screenshots
             SeleniumScreenshot.CreateDirectoryForScreenshots(directoryName);
             //Login to stating portal

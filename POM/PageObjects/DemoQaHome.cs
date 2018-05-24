@@ -40,9 +40,9 @@ namespace AutomationFramework.POM.PageObjects
         /// <summary>
         /// Clicks on any side menu Item on Home page
         /// </summary>
-        public void ClickOnMenuItem(string menuItem)
-        {
-            driver.FindElement(By.LinkText(menuItem)).Click();
-        }
+        //public void ClickOnMenuItem(string menuItem)
+        //{
+        //    driver.FindElement(By.LinkText(menuItem)).Click();
+        //}
     }
 }

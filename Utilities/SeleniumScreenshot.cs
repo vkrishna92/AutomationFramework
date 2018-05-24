@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using RelevantCodes.ExtentReports;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,9 +16,11 @@ namespace AutomationFramework.Utilities
     {
         private static string folder_Path;
         static ITakesScreenshot scrnDriver;
+        private static ExtentTest test;
         static SeleniumScreenshot()
         {
-            scrnDriver = (ITakesScreenshot)dr;            
+            scrnDriver = (ITakesScreenshot)dr;
+            test = ExtentReportClass.test;
         }
         
 
@@ -29,6 +32,8 @@ namespace AutomationFramework.Utilities
             
             Screenshot scrnsht = scrnDriver.GetScreenshot();
             scrnsht.SaveAsFile(folder_Path+"\\"+fileName, ScreenshotImageFormat.Jpeg);
+            test.Log(LogStatus.Info,"Screenshot :"+test.AddScreenCapture(folder_Path + "\\" + fileName));
+
         }
 
         /// <summary>
