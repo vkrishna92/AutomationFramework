@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutomationFramework.SupportLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AutomationFramework.POM.PageObjects.MenuClasses
 {
-    class MenuItems
+    class MenuItems:DriverClass
     {
         public InteractionsMenu interactionMenu;
         public MainMenu mainMenu;
@@ -15,10 +16,10 @@ namespace AutomationFramework.POM.PageObjects.MenuClasses
 
         public MenuItems()
         {
-            interactionMenu = new InteractionsMenu();
-            mainMenu = new MainMenu();
-            widgetMenu = new WidgetMenu();
-            //draggableSubMenu = new DraggableSubMenu();
+            interactionMenu = new InteractionsMenu(dr);
+            mainMenu = new MainMenu(dr);
+            widgetMenu = new WidgetMenu(dr);
+           // draggableSubMenu = new DraggableSubMenu(dr);
         }
     }
 }

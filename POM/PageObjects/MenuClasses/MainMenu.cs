@@ -11,10 +11,21 @@ namespace AutomationFramework.POM.PageObjects
 {
     class MainMenu:DriverClass
     {
-        public IWebElement MenuItem_Home = dr.FindElement(By.LinkText("Home"));        
-        public IWebElement MenuItem_AboutUS = dr.FindElement(By.LinkText("About us"));       
-        public IWebElement MenuItem_Services = dr.FindElement(By.LinkText("Services"));        
-        public IWebElement MenuItem_Blog = dr.FindElement(By.LinkText("Blog"));        
-        public IWebElement MenuItem_Contact = dr.FindElement(By.LinkText("Contact"));
+        [FindsBy(How = How.LinkText, Using = "Home")]
+        public IWebElement MenuItem_Home;
+        [FindsBy(How = How.LinkText, Using = "About us")]
+        public IWebElement MenuItem_AboutUS;
+        [FindsBy(How = How.LinkText, Using = "Services")]
+        public IWebElement MenuItem_Services;
+        [FindsBy(How = How.LinkText, Using = "Blog")]
+        public IWebElement MenuItem_Blog;
+        [FindsBy(How = How.LinkText, Using = "Contact")]
+        public IWebElement MenuItem_Contact;
+
+        public MainMenu(IWebDriver driver)
+        {
+            dr = driver;
+            PageFactory.InitElements(dr, this);
+        }
     }
 }

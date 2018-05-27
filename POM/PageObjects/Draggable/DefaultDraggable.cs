@@ -27,7 +27,7 @@ namespace AutomationFramework.POM.PageObjects.Draggable
             driver = dr;
             PageFactory.InitElements(driver, this);
             menuItem = new MenuItems();
-            subMenu = new DraggableSubMenu();
+            subMenu = new DraggableSubMenu(dr);
         }
 
         public void moveElementBy(int xoffset,int yoffset,IWebElement element)

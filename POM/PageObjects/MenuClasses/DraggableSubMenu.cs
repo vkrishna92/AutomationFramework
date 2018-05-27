@@ -1,5 +1,6 @@
 ﻿using AutomationFramework.SupportLibrary;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,19 @@ namespace AutomationFramework.POM.PageObjects.MenuClasses
 {
     class DraggableSubMenu:DriverClass
     {
-        public IWebElement ConstrainMovement = dr.FindElement(By.LinkText("Constrain movement"));
-        public IWebElement CursorStyle = dr.FindElement(By.LinkText("Cursor style"));
-        public IWebElement Events = dr.FindElement(By.LinkText("Events"));
-        public IWebElement draggableSortable = dr.FindElement(By.LinkText("Draggable + Sortable"));
+        [FindsBy(How = How.LinkText, Using = "Constrain movement")]
+        public IWebElement ConstrainMovement;
+        [FindsBy(How = How.LinkText, Using = "Cursor style")]
+        public IWebElement CursorStyle;
+        [FindsBy(How = How.LinkText, Using = "Events")]
+        public IWebElement Events;
+        [FindsBy(How = How.LinkText, Using = "Draggable + Sortable")]
+        public IWebElement draggableSortable;
+
+        public DraggableSubMenu(IWebDriver driver)
+        {
+            dr = driver;
+            PageFactory.InitElements(dr, this);
+        }
     }
 }

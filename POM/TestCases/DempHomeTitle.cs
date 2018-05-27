@@ -18,10 +18,10 @@ namespace AutomationFramework.POM.TestCases
         public void TC102_TitleValidation()
         {
             DemoQaHome dm = new DemoQaHome(dr);
-            SeleniumScreenshot.TakeFullPageScreenShot("DemoHome");
-            //Validate Page title 
-            Assert.AreEqual("Home", dm.pageHeading.Text);
-            test.Log(LogStatus.Pass, "Page heading validated");
+            SeleniumScreenshot.TakeScreenShot("DemoHome");
+            //Validate Page title             
+            Assertions.AreEqual<string>("Home", dm.pageHeading.Text, "Validating Home page heading");
+            
 
         }
     }

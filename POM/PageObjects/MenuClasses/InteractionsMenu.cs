@@ -1,5 +1,6 @@
 ﻿using AutomationFramework.SupportLibrary;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,23 @@ namespace AutomationFramework.POM.PageObjects
 {
     class InteractionsMenu:DriverClass
     {
-        public IWebElement Draggable = dr.FindElement(By.LinkText("Draggable"));
-        public IWebElement Droppable = dr.FindElement(By.LinkText("Droppable"));
-        public IWebElement Resizable = dr.FindElement(By.LinkText("Resizable"));
-        public IWebElement Selectable = dr.FindElement(By.LinkText("Selectable"));
-        public IWebElement Sortable = dr.FindElement(By.LinkText("Sortable"));
+        [FindsBy(How = How.LinkText, Using = "Draggable")]
+        public IWebElement Draggable;
+
+        [FindsBy(How = How.LinkText, Using = "Droppable")]
+        public IWebElement Droppable;
+
+        [FindsBy(How = How.LinkText, Using = "Resizable")]
+        public IWebElement Resizable;
+        [FindsBy(How = How.LinkText, Using = "Selectable")]
+        public IWebElement Selectable;
+        [FindsBy(How = How.LinkText, Using = "Sortable")]
+        public IWebElement Sortable;
+
+        public InteractionsMenu(IWebDriver driver)
+        {
+            dr = driver;
+            PageFactory.InitElements(dr, this);
+        }
     }
 }

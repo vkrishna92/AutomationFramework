@@ -21,20 +21,18 @@ namespace AutomationFramework.POM.TestCases
         {
             DemoQaHome hm = new DemoQaHome(dr);
             //Validate home page title
-            Assert.AreEqual("Home", hm.pageHeading.Text);           
+            Assertions.AreEqual<String>("Home", hm.pageHeading.Text, "Validating Home page heading");          
             //Take screenshot 
             SeleniumScreenshot.TakeScreenShot("Homescreen.png");
-            test.Log(LogStatus.Pass, "Home page title validated");
             //Click on Draggable side Menu
-            hm.menuItem.interactionMenu.Draggable.Click();
+            hm.menuItem.interactionMenu.Draggable.ClickOnIt();
             //Validate Draggable default page title
             DefaultDraggable  dd = new DefaultDraggable(dr);
-            Assert.AreEqual("Draggable", dd.pageHeading.Text);
-            test.Log(LogStatus.Pass, "Draggable page title validated");
+            Assertions.AreEqual<string>("Draggable", dd.pageHeading.Text,"Validating Draggable Page heading");            
             //Take screenshot
             SeleniumScreenshot.TakeScreenShot("DraggableDefautl.png");
             //Click on constrain movement
-            dd.subMenu.ConstrainMovement.Click();
+            dd.subMenu.ConstrainMovement.ClickOnIt();
             //Take screenshot
             SeleniumScreenshot.TakeScreenShot("ConstrainMovementDefault.png");
             //Perform actions
@@ -42,7 +40,7 @@ namespace AutomationFramework.POM.TestCases
             cons.MoveElementBy(cons.horizontalDrag, 100, 0);
             cons.MoveElementBy(cons.verticalDrag, 0, 50);
             cons.MoveElementBy(cons.constrainDrag, 100, 100);
-            SeleniumScreenshot.TakeFullPageScreenShot("AfterContrainMovement");
+            SeleniumScreenshot.TakeScreenShot("AfterContrainMovement");
             test.Log(LogStatus.Pass, "Drag actions performed");
         }
     }
