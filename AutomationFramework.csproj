@@ -55,7 +55,6 @@
     <Compile Include="POM\TestCases\ConstrainMovementDrag.cs" />
     <Compile Include="POM\TestCases\DefaultDraggableValidation.cs" />
     <Compile Include="POM\TestCases\DempHomeTitle.cs" />
-    <Compile Include="POM\TestCases\HomeInteractionsMenu.cs" />
     <Compile Include="Utilities\DriverClass.cs" />
     <Compile Include="Utilities\ExplicitWaits.cs" />
     <Compile Include="Utilities\ExtentReportClass.cs" />

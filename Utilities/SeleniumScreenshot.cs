@@ -61,11 +61,11 @@ namespace AutomationFramework.Utilities
         }
 
         /// <summary>
-        /// Takes screenshot untill the specified element
+        /// Takes full page  screenshot
         /// </summary>
         /// <param name="fileName"></param>
         /// <param name="webElement"></param>
-        public static void TakeScreenShot(string fileName,IWebElement webElement)
+        public static void TakeFullPageScreenShot(string fileName)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)dr;
             //int height = Convert.ToInt32((js.ExecuteScript("return window.innerHeight")));

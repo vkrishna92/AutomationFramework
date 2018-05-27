@@ -3,6 +3,7 @@ using AutomationFramework.POM.TestCases.TestSetup;
 using AutomationFramework.Utilities;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using RelevantCodes.ExtentReports;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,13 @@ namespace AutomationFramework.POM.TestCases
     class DempHomeTitle:TestBase
     {
         [Test]
-        public void TitleValidation()
+        public void TC102_TitleValidation()
         {
             DemoQaHome dm = new DemoQaHome(dr);
-            SeleniumScreenshot.TakeScreenShot("DemoHome",dr.FindElement(By.LinkText("Tooltip")));
-            Console.WriteLine(dm.pageHeading.Text);
+            SeleniumScreenshot.TakeFullPageScreenShot("DemoHome");
+            //Validate Page title 
+            Assert.AreEqual("Home", dm.pageHeading.Text);
+            test.Log(LogStatus.Pass, "Page heading validated");
 
         }
     }

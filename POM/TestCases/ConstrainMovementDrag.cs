@@ -17,7 +17,7 @@ namespace AutomationFramework.POM.TestCases
     class ConstrainMovementDrag:TestBase
     {
        [Test]
-       public void ValidateContrainMovementDrag()
+       public void TC100_ValidateContrainMovementDrag()
         {
             DemoQaHome hm = new DemoQaHome(dr);
             //Validate home page title
@@ -42,7 +42,7 @@ namespace AutomationFramework.POM.TestCases
             cons.MoveElementBy(cons.horizontalDrag, 100, 0);
             cons.MoveElementBy(cons.verticalDrag, 0, 50);
             cons.MoveElementBy(cons.constrainDrag, 100, 100);
-            SeleniumScreenshot.TakeScreenShot("AfterContrainMovement", cons.constrainDrag);
+            SeleniumScreenshot.TakeFullPageScreenShot("AfterContrainMovement");
             test.Log(LogStatus.Pass, "Drag actions performed");
         }
     }

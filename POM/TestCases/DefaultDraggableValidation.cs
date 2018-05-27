@@ -17,7 +17,7 @@ namespace AutomationFramework.POM.TestCases
     class DefaultDraggableValidation:TestBase
     {
         [Test]
-        public void ValidateDefualtDraggable()
+        public void TC101_ValidateDefualtDraggable()
         {
             DemoQaHome hm = new DemoQaHome(dr);
             //Validate home page title 
@@ -31,7 +31,7 @@ namespace AutomationFramework.POM.TestCases
             DefaultDraggable drg = new DefaultDraggable(dr);
             SeleniumScreenshot.TakeScreenShot("DraggableHome.png");
             drg.moveElementBy(100, 100,drg.draggableBox);
-            SeleniumScreenshot.TakeScreenShot("DraggableElement_afterDrag", drg.draggableBox);
+            SeleniumScreenshot.TakeFullPageScreenShot("DraggableElement_afterDrag");
             test.Log(LogStatus.Pass, "Drag operation performed");
         }
     }
