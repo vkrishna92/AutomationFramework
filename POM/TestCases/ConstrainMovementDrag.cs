@@ -40,7 +40,7 @@ namespace AutomationFramework.POM.TestCases
             cons.MoveElementBy(cons.horizontalDrag, 100, 0);
             cons.MoveElementBy(cons.verticalDrag, 0, 50);
             cons.MoveElementBy(cons.constrainDrag, 100, 100);
-            SeleniumScreenshot.TakeScreenShot("AfterContrainMovement");
+            SeleniumScreenshot.TakeScreenShot("AfterContrainMovement.png");
             test.Log(LogStatus.Pass, "Drag actions performed");
         }
     }

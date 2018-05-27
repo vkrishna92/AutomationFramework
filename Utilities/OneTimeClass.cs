@@ -2,20 +2,19 @@
 using RelevantCodes.ExtentReports;
 using System.Net.Mail;
 using AutomationFramework.SupportLibrary;
+using log4net;
 
 namespace AutomationFramework.POM.TestCases
 {
     [SetUpFixture]
     class OneTimeClass:ExtentReportClass
     {
-       
+        
         [OneTimeSetUp]
         public void LogOpen()
-        {
-            
+        {            
             //Create a instance of Extenport            
-            ExtentReportClass.CreateExtentReportInstacne();
-            
+            ExtentReportClass.CreateExtentReportInstacne();            
         }              
        [OneTimeTearDown]
         public void logClose()

@@ -60,6 +60,7 @@
     <Compile Include="Utilities\ExplicitWaits.cs" />
     <Compile Include="Utilities\Extension_Methods.cs" />
     <Compile Include="Utilities\ExtentReportClass.cs" />
+    <Compile Include="Utilities\log.cs" />
     <Compile Include="Utilities\OneTimeClass.cs" />
     <Compile Include="Utilities\SeleniumActions.cs" />
     <Compile Include="Utilities\SeleniumScreenshot.cs" />
@@ -82,6 +83,9 @@
   <ItemGroup>
     <PackageReference Include="ExtentReports">
       <Version>2.40.2</Version>
+    </PackageReference>
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
     </PackageReference>
     <PackageReference Include="NUnit">
       <Version>3.10.1</Version>
@@ -110,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -24,7 +24,7 @@ namespace AutomationFramework.POM.TestCases
             Assert.AreEqual("Home", hm.pageHeading.Text);
             //Take screenshot 
             SeleniumScreenshot.TakeScreenShot("Homescreen.png");
-            hm.menuItem.interactionMenu.Draggable.Click();
+            hm.menuItem.interactionMenu.Draggable.ClickOnIt();
             ExplicitWaits.ElementIsVisible(By.TagName("h1"));
             Assert.AreEqual("Draggable", dr.FindElement(By.TagName("h1")).Text);
             test.Log(LogStatus.Pass, "Draggable page title validated");
