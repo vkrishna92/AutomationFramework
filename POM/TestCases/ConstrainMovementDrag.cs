@@ -25,7 +25,7 @@ namespace AutomationFramework.POM.TestCases
             //Take screenshot 
             SeleniumScreenshot.TakeScreenShot("Homescreen.png");
             //Click on Draggable side Menu
-            hm.menuItem.interactionMenu.Draggable.ClickOnIt();
+            hm.menuItem.interactionMenu.Draggable.ClickOnIt();            
             //Validate Draggable default page title
             DefaultDraggable  dd = new DefaultDraggable(dr);
             Assertions.AreEqual<string>("Draggable", dd.pageHeading.Text,"Validating Draggable Page heading");            
