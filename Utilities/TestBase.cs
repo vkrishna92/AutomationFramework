@@ -41,7 +41,9 @@ namespace AutomationFramework.POM.TestCases.TestSetup
         {
             //StackTrace details for failed Testcases
             ExtentReportClass.EndExtentTest();
+            dr.Close();
             dr.Quit();
+            dr.Dispose();
             Thread.Sleep(2000);
         }
 
