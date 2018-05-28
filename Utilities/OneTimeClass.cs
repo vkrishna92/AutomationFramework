@@ -2,7 +2,7 @@
 using RelevantCodes.ExtentReports;
 using System.Net.Mail;
 using AutomationFramework.SupportLibrary;
-using log4net;
+//using log4net;
 
 namespace AutomationFramework.POM.TestCases
 {

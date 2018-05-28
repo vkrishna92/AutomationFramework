@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.PhantomJS;
 using OpenQA.Selenium.Remote;
@@ -25,6 +27,13 @@ namespace AutomationFramework.SupportLibrary
             else if (browser.ToLower() == "htmlunit")
             {
                 dr = new RemoteWebDriver(DesiredCapabilities.HtmlUnit());
+            }
+            else if(browser.ToLower()=="edge")
+            {
+                InternetExplorerOptions caps = new InternetExplorerOptions{ IgnoreZoomLevel = true };                
+                //caps.SetCapability("ignoreZoomSetting", true);
+                dr = new InternetExplorerDriver(caps);
+               // dr = new InternetExplorerDriver();
             }
             else
             {

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AutomationFramework.SupportLibrary;
 using AutomationFramework.Utilities;
+using System.Threading;
 
 namespace AutomationFramework.POM.TestCases.TestSetup
 {
@@ -30,7 +31,8 @@ namespace AutomationFramework.POM.TestCases.TestSetup
             SeleniumScreenshot.CreateDirectoryForScreenshots(directoryName);
             //Login to stating portal
             TestInit.ManageLogin(dr);
-            //Explicit wait            
+            //Explicit wait   
+            Thread.Sleep(1000);
             ExplicitWaits.ElementExists(By.ClassName("entry-title"));
         }
         
@@ -38,8 +40,9 @@ namespace AutomationFramework.POM.TestCases.TestSetup
         public void closure()
         {
             //StackTrace details for failed Testcases
-            ExtentReportClass.EndExtentTest();           
-            dr.Close();            
+            ExtentReportClass.EndExtentTest();
+            dr.Quit();
+            Thread.Sleep(2000);
         }
 
     }
