@@ -20,9 +20,7 @@ namespace AutomationFramework.POM.TestCases
             DemoQaHome dm = new DemoQaHome(dr);
             SeleniumScreenshot.TakeScreenShot("DemoHome");
             //Validate Page title             
-            Assertions.AreEqual<string>("Home", dm.pageHeading.Text, "Validating Home page heading");
-            
-
+            Assertions.AreEqual<string>("Home", dm.pageHeading.Text, "Validating Home page heading");         
         }
     }
 }
